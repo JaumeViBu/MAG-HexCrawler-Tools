@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAG-HexCrawler-Tools</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="scripts/rando-min.js"></script>
+  <script src="scripts/index.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="/media/dice.ico">
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <button class="nav-tab tab-active" id="nav-tab-explore">Explore</button>
+    <button class="nav-tab" id="nav-tab-hunting">Hunting/Foraging</button>
+  </nav>
+  <div id="main-container">
+    <div class="tab-container tab-container-active" id="tab-container-explore">
+      <h1>Prev Hex</h1>
+      <div class="button-container" id="prev-hex-container">
+        <label for="rbtn-grass"><input type="radio" name="rbtn-prev-hex" id="rbtn-grass" value="0"
+            checked>Grassland</label>
+        <label for="rbtn-hills"><input type="radio" name="rbtn-prev-hex" id="rbtn-hills" value="1">Hills</label>
+        <label for="rbtn-woods"><input type="radio" name="rbtn-prev-hex" id="rbtn-woods" value="2">Woods</label>
+        <label for="rbtn-mountains"><input type="radio" name="rbtn-prev-hex" id="rbtn-mountains"
+            value="3">Mountains</label>
+      </div>
+      <div class="button-container">
+        <button onclick="travelTile()">New Tile</button>
+        <button onclick="travelTile(true)">Known Tile</button>
+      </div>
+      <pre class="tab-container-tile-info inactive">
+      </pre>
+    </div>
+    <div class="tab-container" id="tab-container-hunting">
+      <h1>Hunting</h1>
+    </div>
+  </div>
+</body>
+
+</html>
